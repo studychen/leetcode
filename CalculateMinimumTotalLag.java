@@ -11,6 +11,7 @@ public class CalculateMinimumTotalLag {
         CalculateMinimumTotalLag job = new CalculateMinimumTotalLag();
         System.out.println(job.minimumTotalLag(new int[] {3,10,12}, new int[] {1,8,17}));
     }
+    
     public int minimumTotalLag(int[] center, int[] destination) {
         PriorityQueue<Integer> centerQueue = new PriorityQueue<>();
         PriorityQueue<Integer> destinationQueue = new PriorityQueue<>();
