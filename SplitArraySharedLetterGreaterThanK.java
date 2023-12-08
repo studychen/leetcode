@@ -14,9 +14,10 @@ public class SplitArraySharedLetterGreaterThanK {
 
     public static void main(String[] args) {
         // abbcac. It has [ab, bcac] [abbc, ac] two potential split
-        System.out.println(new SplitArraySharedLetterGreaterThanK().findNumWaysToSplit("abbcac", 1)+ " expect: 2");
-        System.out.println(new SplitArraySharedLetterGreaterThanK().findNumWaysToSplit("adbccdbada", 2)+ " expect: 4");
-        System.out.println(new SplitArraySharedLetterGreaterThanK().findNumWaysToSplit("aabaa", 1)+ " expect: 0");
+        SplitArraySharedLetterGreaterThanK job = new SplitArraySharedLetterGreaterThanK();
+        System.out.println(job.findNumWaysToSplit("abbcac", 1)+ " expect: 2");
+        System.out.println(job.findNumWaysToSplit("adbccdbada", 2)+ " expect: 4");
+        System.out.println(job.findNumWaysToSplit("aabaa", 1)+ " expect: 0");
     }
 
     public int findNumWaysToSplit(String s, int k) {
