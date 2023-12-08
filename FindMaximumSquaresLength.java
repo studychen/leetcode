@@ -17,7 +17,8 @@ public class FindMaximumSquaresLength {
         FindMaximumSquaresLength ans = new FindMaximumSquaresLength();
         System.out.println(ans.findMaxLength(new int[]{2, 8, 9, 16, 4, 3}));
         System.out.println(ans.findMaxLength(new int[]{2, 8, 256, 257, 255, 9, 32, 16, 4, 3}));
-        System.out.println(ans.findMaxLength(new int[]{2, 3, 5}));
+        System.out.println(ans.findMaxLength(new int[]{2, 3, 9, 81, 5}));
+        System.out.println(ans.findMaxLength(new int[]{2, 25, 625, 5}));
     }
 
     int findMaxLength(int[] arr) {
@@ -28,13 +29,8 @@ public class FindMaximumSquaresLength {
 
         int max = 0;
         for (long num : set) {
-            if (num != 2) {
-                if (!isPerfectSquare(num)) {
-                    continue;
-                }
-                if (set.contains((long) Math.sqrt(num))) {
-                    continue;
-                }
+            if (set.contains((long) Math.sqrt(num)) && isPerfectSquare(num)) {
+                continue;
             }
             int curr = 1;
             while (set.contains(num * num)) {
