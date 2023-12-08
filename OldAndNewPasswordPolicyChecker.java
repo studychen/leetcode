@@ -42,7 +42,8 @@ public class OldAndNewPasswordPolicyChecker {
         int pOld = 0;
         int pNew = 0;
         while (pNew < newStr.length() && pOld < oldStr.length()) {
-            if (newStr.charAt(pNew) == oldStr.charAt(pOld) || transform(newStr.charAt(pNew)) == oldStr.charAt(pOld)) {
+            if (newStr.charAt(pNew) == oldStr.charAt(pOld)
+                    || transform(newStr.charAt(pNew)) == oldStr.charAt(pOld)) {
                 pOld++;
             }
             pNew++;
